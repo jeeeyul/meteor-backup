@@ -1,6 +1,6 @@
 {
   "name" : "meteor-backup",
-  "version" : "0.0.2",
+  "version" : "0.0.21030",
   "description" : "Provides backup and restore for meteor database.",
   "people" : {
     "author" : {
