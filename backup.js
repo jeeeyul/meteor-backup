@@ -12,6 +12,8 @@ var argv = require("optimist")
     alias : "out",
     default : "dump"
   })
+  .string("out")
+  .string("host")
   .demand(["host", "out"])
   .argv;
 
