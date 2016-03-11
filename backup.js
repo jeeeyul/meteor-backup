@@ -64,7 +64,7 @@ function onURLReceive(buffer){
 
 function backup(scheme){
   console.log("Starting backup from " + scheme.host.yellow + "/" + scheme.db.yellow + " to " + argv.out.yellow);
-  var args = ['-h', scheme.host, '--port', scheme.port, '--username', scheme.userId, '--password', scheme.password, '-d', scheme.db, '-o', argv.out];
+  var args = ['-h', scheme.host, '--port', scheme.port, '--username', scheme.userId, '--password', scheme.password, '-d', scheme.db, '-o', argv.out, '--excludeCollectionsWithPrefix', 'system.'];
   var child = spawn('mongodump', args, {
     stdio : ['pipe', 'pipe', process.stdout]
   });
